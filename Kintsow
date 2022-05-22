@@ -1,0 +1,240 @@
+<meta http-equiv="x-dns-prefetch-control" content="off"/><link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3"><style>
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    position: relative;
+    margin: 0 auto -250px;
+}
+ 
+body {
+  /*background: transparent url(/web/20130302144550/http://img.yatv.ru/images/body.bg.png);*/
+  background: #0f1a1e;
+  font-family: Arial;
+  font-size: 12px;
+  text-align: center;
+  min-width: 1000px;
+  height: 100%;
+}
+ 
+a {
+    text-decoration: none;
+    text-outline: none;
+}
+ 
+div {
+    display: block;
+}
+ 
+#header {
+  width: 100%;
+  height: 57px;
+  margin-bottom: -2px;
+  position: relative;
+  z-index: 2;
+  background: url(https://40.media.tumblr.com/48a3f769ed47a3ca70553be8f23b0604/tumblr_no9o560CUi1tdybbwo1_75sq.png) repeat-x top left;
+  text-align: center;
+  }
+ 
+  #header .head {
+  width: 980px;
+  height: 57px;
+  margin: 0 auto;
+  text-align: left;
+}
+ 
+#header .head .logotype {
+  width: 173px;
+  height: 55px;
+  float: left;
+  display: block;
+  background: url(https://41.media.tumblr.com/9af78d3aefc452e34e6a82aa7bfedd06/tumblr_no9o60F5p61tdybbwo1_250.png) no-repeat center left;
+}
+ 
+#header .head .links {
+  float: right;
+  overflow: hidden;
+  padding-top: 19px;
+  width: 130px;
+}
+ 
+#header .head .links a {
+  display: block;
+  float: right;
+  margin-left: 15px;
+  color: #6FDEEE;
+}
+ 
+#header .head .links a:hover {
+    text-decoration: underline;
+}
+ 
+#header .head .menu {
+  height: 55px;
+  margin-left: 15px;
+  float: left;
+  font-family: Trebuchet MS;
+  font-size: 16px;
+  text-shadow: 0 -1px 0 #111111;
+}
+ 
+#header .head .menu a {
+    height:16px;
+    line-height:16px;
+    padding-left:13px;
+    padding-right:13px;
+    padding-top:18px;
+    padding-bottom:21px;
+    color: #ebebeb;
+    float:left;
+    margin-left:-1px;
+   
+}
+ 
+#header .head .menu a:hover {
+    text-decoration:none;
+    color:#ffffff;
+    background: url(https://41.media.tumblr.com/313ab30b71c8fa67e64a2e510c7dba86/tumblr_no9o70iE8F1tdybbwo1_75sq.png) repeat-x top left;
+}
+ 
+#header .head .menu .separator {
+  width: 2px;
+  height: 55px;
+  float: left;
+  position: relative;
+  background: url(https://41.media.tumblr.com/13a7ef87b1f362e1666d2cadf38f4a7c/tumblr_no9o7m1hv21tdybbwo1_75sq.png) no-repeat top left;
+}
+ 
+#content {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 300px;
+  overflow: hidden;
+  transition: width 0.2s;
+}
+ 
+#content-header {
+    height: 34px;
+    background: #242424;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid black;
+    border-bottom: 3px solid #5C5C5C;
+}
+ 
+#content-footer {
+    height: 10px;
+    background: #242424;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 2px solid black;
+    border-top: none;
+    clear: both;
+}
+ 
+.channel-title {
+  font-size: 16px;
+  font-family: Trebuchet MS;
+  color: #ffffff;
+  padding-left: 20px;
+  line-height: 34px;
+  float: left;
+  text-shadow: 0px -1px 0px #111;
+}
+ 
+#footer {
+    position:absolute;
+    bottom: 0px;
+    width:100%;
+    background: url(https://41.media.tumblr.com/5fe8b38e06c1d2a3efbb842f127d4b41/tumblr_no9nvpVpzd1tdybbwo1_250.png) repeat-x top left;
+    clear: both;
+}
+ 
+#slider {
+    width: 300px;
+    margin-top: 20px;
+    float: right;
+}
+ 
+.tmblr-iframe--controls {
+    display: none!important;
+}
+ 
+</style>
+ 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#slider" ).slider({
+      value:80,
+      min: 20,
+      max: 100,
+      step: 5,
+      slide: function( event, ui ) {
+        $("#content").width(ui.value + "%");
+      }
+    });
+});
+  </script>
+ 
+  <title>/33 | ЯTV - Я есть телевидение!</title>
+  <body>
+  <div id="wrapper">
+      <div id="header">
+          <div class="head">
+              <a href="#" class="logotype" title="Переход на главную страницу ЯTV"></a>
+             
+              <div class="links">
+                   
+                  <a href="#">Вход</a>
+                  <a href="#">Регистрация</a>
+              </div>
+              <div id="slider" style="display:inline-block"></div> 
+              <div class="menu">
+                  <div class="separator"></div>
+                  <a href="https://userstyles.org/styles/142408/hitbox-colors-smashcast-dark-theme">Тёмный чатик</a>
+                  <div class="separator"></div>
+                 <a href="http://kentsow2.tumblr.com/takiedela2">Cybergame</a>
+                 <div class="separator"></div>
+                 <a href="http://pastebin.com/s0JYdTC6">LiveStream</a>
+              </div>
+          </div>
+      </div>
+     
+      <div id="content">
+            <div id="content-header">
+              <div class="channel-title">
+                  /33sm
+              </div>
+            </div>
+ 
+            <div style="position:relative; float:left; padding-bottom:45%; width:75%; height:0;">
+                <!--<iframe frameborder="0" style="position:absolute; height:100%; width:100%;" src="http://www.goodgame.ru/player.php?28174"></iframe>-->
+                <iframe frameborder="0" style="position:absolute; height:100%; width:100%;" src="https://player.twitch.tv/?channel=33zm&parent=kentsow.tumblr.com"> allowfullscreen="true" </iframe>
+            </div>
+           
+            <div style="position:relative; float:right;right: 2px; padding-bottom:45%; width:25%; height:0;">      
+                <iframe style="position:absolute; height:100%; width:100%; border-right: 2px solid black" src="https://minnit.chat/33sm?autoconnect=true" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+            <div id="content-footer"></div>
+      </div>
+     
+     
+     
+      <div id="footer">
+          <img style="margin:auto;" src="https://40.media.tumblr.com/12585da3215752cc2a06c26aaedc1369/tumblr_no9n6yHkcp1tdybbwo1_1280.png" />
+      </div>
+         
+      </div>
+  </body>
+ 
+ <script src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=a4169182721d644dacd145af89115b95"></script>
